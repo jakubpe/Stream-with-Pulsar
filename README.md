@@ -10,7 +10,7 @@ Data Generation:
 The project kicks off by generating a static dataset with a date-time column using PySpark. This dataset captures transactional details, including sender, receiver, and transaction amounts, setting the stage for subsequent analysis.
 
 Data Enrichment:
-A complementary dataset for data enrichment is created to augment the analysis. This dataset includes additional user information, such as bank-emitter details and location codes, enhancing the depth of the overall analysis.
+A complementary dataset for data enrichment is created to augment the analysis.
 
 Data Streaming with Pulsar:
 A robust Python code, executed within the Jupyter/All-Spark-Notebook environment, is developed to read data from the static datasets and push it seamlessly into Apache Pulsar. This establishes a real-time streaming environment for continuous data ingestion and processing.
@@ -19,7 +19,7 @@ Real-time Filtering and Enrichment:
 Within the Apache Pulsar environment, data is dynamically filtered based on specified conditions, ensuring the quality of the incoming stream. Subsequently, the streaming data is enriched with additional user details from the static dataset, creating a comprehensive dataset for further analysis.
 
 Window Functions and Aggregation with PySpark:
-PySpark's capabilities are harnessed to apply window functions to the enriched stream. For example, the project computes the average transaction value per bank-emitter using PySpark's advanced analytics functionalities. This step ensures a nuanced understanding of sales patterns and user behavior over specified time intervals.
+PySpark's capabilities are harnessed to apply window functions to the enriched stream. For example, the project computes the sum of transaction amounts.
 
 Storage in Minio via Delta Lake:
 The final processed and enriched data is securely stored in Minio, a high-performance object storage service, using Delta Lake. This combination ensures data integrity, scalability, and efficient retrieval for future analyses or reporting.
